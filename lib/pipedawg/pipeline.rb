@@ -12,7 +12,7 @@ module Pipedawg
         stages: ['build'],
         workflow: nil
       }.merge(opts)
-      update
+      # update
     end
 
     def to_yaml
