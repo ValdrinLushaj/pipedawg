@@ -12,7 +12,7 @@ module Pipedawg
         stages: ['build'],
         workflow: nil
       }.merge(opts)
-      # update
+      update
     end
 
     def to_yaml
@@ -32,7 +32,7 @@ module Pipedawg
     def update
       stages = []
       opts[:jobs].each do |job|
-        stage = stage_from_needs(opts[:jobs], job.name)
+        stage = 1
         stages << stage
         job.opts[:stage] = stage.to_s
       end
